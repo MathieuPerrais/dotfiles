@@ -18,10 +18,13 @@ function o() {
 ZSH_DISABLE_COMPFIX="true"
 
 
-# Add path to Homebrew managed Python, Ruby etc.. bins before all $PATH (don't want them managed by OS X)
+# Add path to Homebrew managed Python, Ruby, Go etc.. bins before all $PATH (don't want them managed by OS X)
 export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 export PATH="/usr/local/opt/ruby/bin:$PATH"
 export PATH="/usr/local/opt/icu4c/bin:$PATH"
+export GOPATH="$(go env GOPATH)"
+export GOROOT="$(go env GOROOT)"
+export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
 
 . ~/.oh-my-zsh/z/z.sh
 
