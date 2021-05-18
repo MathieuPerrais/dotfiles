@@ -25,10 +25,11 @@ export PATH="/usr/local/opt/icu4c/bin:$PATH"
 export GOPATH="$(go env GOPATH)"
 export GOROOT="$(go env GOROOT)"
 export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
+export GPG_TTY=$(tty) # Add GPG key to profile, needed for git sign
 
 . ~/.oh-my-zsh/z/z.sh
 
-# Xcode via @orta
+# Xcode
 openx(){ 
   if test -n "$(find . -maxdepth 1 -name '*.xcworkspace' -print -quit)"
   then

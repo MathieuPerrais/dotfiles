@@ -1,0 +1,18 @@
+[user]
+	name = Mathieu Perrais
+	email = mperrais@gmail.com
+	signingkey = F36829F4BA0569C79BBAC88236C16CC8308BF928
+[core]
+	excludesfile = ~/.gitignore_global
+[commit]
+	template = ~/.stCommitMsg
+	gpgsign = true
+[gpg]
+	program = gpg
+# I use Sourcetree, I know, don't judge.
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
